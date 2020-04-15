@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import com.co.google.models.DataModels;
 import com.co.google.tasks.generic.NavigateGoogleTask;
 import com.co.google.tasks.main.GoogleHomeTask;
+import com.co.google.tasks.main.GoogleIntoRoothfusTask;
+import com.co.google.tasks.main.GoogleResultRoothfusTask;
 import com.co.google.tasks.main.GoogleResultSearch;
 
 import cucumber.api.java.Before;
@@ -48,12 +50,16 @@ public class GoogleSearchStepDefinition {
 
 	@Then("^the first result is ?The Name of the Wind - Patrick Rothfuss?$")
 	public void theFirstResultIsTheNameOfTheWindPatrickRothfuss() {
-		System.out.println("TODO ESTÁ OK");
+		try {
+			userGoogle.wasAbleTo(GoogleResultRoothfusTask.scrollInto(hisBrowser));
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
 	@Then("^I go to the ?Patrick Rothfuss - The Books? page$")
 	public void iGoToThePatrickRothfussTheBooksPage() {
-		System.out.println("VAMOS CON TODA");
+		userGoogle.attemptsTo(GoogleIntoRoothfusTask.clickRoot(hisBrowser));
 	}
 
 	
