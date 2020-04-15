@@ -18,12 +18,45 @@ repositories {
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
+   api 'org.apache.commons:commons-math3:3.6.1'
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:23.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+     //compile 'net.serenity-bdd:serenity-core:1.9.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.91'
+    //compile 'net.serenity-bdd:serenity-junit:1.9.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.0.91'
+    //compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.50'
+    //compile 'net.serenity-bdd:serenity-screenplay:1.9.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.0.91'
+    //compile 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '2.0.91'
+	compile group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: '2.0.91'
+    
+    compile 'com.codoid.products:fillo:1.18'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.assertj:assertj-core:3.9.1'
+    testCompile 'org.slf4j:slf4j-simple:1.7.7'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
 }
 
+tasks.withType(Test){
+    systemProperties = System.properties
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+
+gradle.startParameter.continueOnFailure = true 
+
+test {
+    systemProperty 'usuario', System.getProperty('usuario')
+    systemProperty 'contrasena', System.getProperty('contrasena')
+    
+    systemProperty 'usuarioVerificador', System.getProperty('usuarioVerificador')
+    systemProperty 'contrasenaVerificador', System.getProperty('contrasenaVerificador')
+ }
