@@ -3,7 +3,10 @@ package com.co.google.tasks.main;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static com.co.google.userinterfaces.GoogleHomePage.INPUT_TEXT;
+import static com.co.google.userinterfaces.GoogleHomePage.BTN_SEARCH;
 import org.openqa.selenium.WebDriver;
+
+import com.co.google.interactions.generics.ClickOn;
 import com.co.google.interactions.generics.EnterInformation;
 import com.co.google.questions.ResultGoogleHomeQuestion;
 import net.serenitybdd.screenplay.Actor;
@@ -24,7 +27,8 @@ public class GoogleHomeTask implements Task{
 	public <T extends Actor> void performAs(T actor) {
 			actor.asksFor(ResultGoogleHomeQuestion.isClickable());
 			actor.attemptsTo(WaitUntil.the(INPUT_TEXT, isVisible()),
-					EnterInformation.textField(strData, INPUT_TEXT));
+					EnterInformation.textField(strData, INPUT_TEXT),
+					ClickOn.element(BTN_SEARCH));
 	}
 	
 	public static GoogleHomeTask enterText(WebDriver hisBrowser, String strData) {
