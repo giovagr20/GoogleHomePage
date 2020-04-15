@@ -22,8 +22,7 @@ public class GoogleResultRoothfusTask implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(WaitUntil.the(DIV_ROOTHFUS, isVisible()),
-				ScrollDown.doScroll(hisBrowser, DIV_ROOTHFUS));
+		actor.attemptsTo(ScrollDown.doScroll(hisBrowser, DIV_ROOTHFUS));
 	}
 	
 	public static GoogleResultRoothfusTask scrollInto(WebDriver hisBrowser) {

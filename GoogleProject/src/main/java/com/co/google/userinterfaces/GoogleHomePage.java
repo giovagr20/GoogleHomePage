@@ -12,5 +12,5 @@ public class GoogleHomePage extends PageObject {
 	public static final Target BTN_SEARCH = Target.the("BTN_SEARCH").located(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]"));
 	public static final Target DIV_FIRST = Target.the("DIV_FIRST").located(By.xpath("//*[@id=\"rso\"]/div[1]/div/div[1]"));
 	public static final Target DIV_ROOTHFUS = Target.the("DIV_ROOTHFUS").located(By.xpath("//*[@id=\"rso\"]/div[5]/div/div[1]"));
-	public static final Target LNK_ROOTHFUS = Target.the("LNK_ROOTHFUS").located(By.xpath("//*[@id=\"rso\"]/div[5]/div/div[1]/a"));
+	public static final Target LNK_ROOTHFUS = Target.the("LNK_ROOTHFUS").located(By.xpath("//*[@id=\"rso\"]/div[1]/div/div[1]/a"));
 }

@@ -20,7 +20,7 @@ public class ScrollDown implements Interaction {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		JavascriptExecutor js = (JavascriptExecutor) hisBrowser;
-		js.executeScript("arguments[0].scrollIntoView(true);", idElement);
+		js.executeScript("arguments[0].scrollIntoView();", idElement);
 	}
 	
 	public static ScrollDown doScroll(WebDriver hisBrowser, Target idElement) {

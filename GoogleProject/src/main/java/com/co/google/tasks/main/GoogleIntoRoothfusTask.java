@@ -4,9 +4,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static com.co.google.userinterfaces.GoogleHomePage.LNK_ROOTHFUS;
 import org.openqa.selenium.WebDriver;
-
 import com.co.google.interactions.generics.ClickOn;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;
