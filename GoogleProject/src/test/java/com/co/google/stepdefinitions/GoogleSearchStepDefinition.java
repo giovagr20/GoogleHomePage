@@ -48,16 +48,16 @@ public class GoogleSearchStepDefinition {
 		}
 	}
 
-	@Then("^the first result is ?The Name of the Wind - Patrick Rothfuss?$")
+	@Then("^the first result is The Name of the Wind Patrick Rothfuss$")
 	public void theFirstResultIsTheNameOfTheWindPatrickRothfuss() {
 		try {
-			userGoogle.wasAbleTo(GoogleResultRoothfusTask.scrollInto(hisBrowser));
+			userGoogle.attemptsTo(GoogleResultRoothfusTask.scrollInto(hisBrowser));
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
 
-	@Then("^I go to the ?Patrick Rothfuss - The Books? page$")
+	@Then("^I go to the Patrick Rothfuss The Books page$")
 	public void iGoToThePatrickRothfussTheBooksPage() {
 		userGoogle.attemptsTo(GoogleIntoRoothfusTask.clickRoot(hisBrowser));
 	}

@@ -2,7 +2,6 @@ package com.co.google.interactions.generics;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
@@ -21,7 +20,7 @@ public class ScrollDown implements Interaction {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		JavascriptExecutor js = (JavascriptExecutor) hisBrowser;
-		js.executeScript("arguments[0].scrollIntoView();", idElement);
+		js.executeScript("arguments[0].scrollIntoView(true);", idElement);
 	}
 	
 	public static ScrollDown doScroll(WebDriver hisBrowser, Target idElement) {

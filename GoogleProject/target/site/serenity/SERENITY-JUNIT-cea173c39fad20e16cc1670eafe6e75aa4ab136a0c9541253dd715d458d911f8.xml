@@ -1,1 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Google Homepage Search" skipped="1" tests="1" time="27.05" timestamp="2020-04-15 03:26:01"><testcase name="User can search with �Google Search�"><skipped/></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Google Homepage Search" skipped="0" tests="1" time="17.43" timestamp="2020-04-15 03:48:24"><testcase name="User can search with �Google Search�"><error message="Argument is of an illegal type: net.serenitybdd.screenplay.targets.ByTarget" type="java.lang.IllegalArgumentException">Argument is of an illegal type: net.serenitybdd.screenplay.targets.ByTarget</error><system-err>Argument is of an illegal type: net.serenitybdd.screenplay.targets.ByTarget&#13;
+com.co.google.interactions.generics.ScrollDown.performAs(ScrollDown.java:23)&#13;
+com.co.google.tasks.main.GoogleResultRoothfusTask.performAs(GoogleResultRoothfusTask.java:25)&#13;
+com.co.google.stepdefinitions.GoogleSearchStepDefinition.theFirstResultIsTheNameOfTheWindPatrickRothfuss(GoogleSearchStepDefinition.java:54)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+</system-err></testcase></testsuite>
