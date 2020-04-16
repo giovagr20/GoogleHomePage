@@ -8,7 +8,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features= {"src/test/resources/features/google_search.feature"},
+		features= {"src/test/resources/features/google_suggestions.feature"},
 		glue="com.co.google.stepdefinitions",
 		snippets=SnippetType.CAMELCASE)
-public class GoogleSearchRunner{}
+public class GoogleSuggestionsRunner{}
