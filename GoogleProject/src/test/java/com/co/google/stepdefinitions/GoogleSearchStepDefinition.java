@@ -25,7 +25,8 @@ public class GoogleSearchStepDefinition {
 	@Before
 	public void setUp() {
 		userGoogle.can(BrowseTheWeb.with(hisBrowser));
-		DataModels.setSrtData("The name of the wind");
+		hisBrowser.manage().window().maximize();
+		DataModels.setSrtData(System.getenv().get("strData"));
 	}
 	
 	@Given("^User navigates into homepage$")

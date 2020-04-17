@@ -24,7 +24,8 @@ public class GoogleSuggestionsStepDefinition {
 	@Before
 	public void setUp() {
 		userGoogle.can(BrowseTheWeb.with(hisBrowser));
-		DataModels.setSrtData("The name of the w");
+		hisBrowser.manage().window().maximize();
+		DataModels.setSrtData(System.getenv().get("strData"));
 	}
 	
 	@Given("^User navigates into homepage google$")

@@ -19,6 +19,7 @@ public class WikipediaHomeTask implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.asksFor(ResultWikipediaQuestion.isOkay());
+		System.out.println(ResultWikipediaQuestion.isOkay());
 	}
 	
 	public static WikipediaHomeTask validateData(WebDriver hisBrowser) {
